@@ -6,3 +6,13 @@
 //
 
 import Foundation
+func Bai7()
+{
+    print("Nhập họ tên : ",terminator: "")
+    var fullname:String=String(readLine()!) ?? ""
+    
+    var t = fullname.components(separatedBy: " ")
+    print("Họ : \(t[0])")
+    print("Tên : \(t[t.count-1])")
+    
+}

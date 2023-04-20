@@ -15,27 +15,47 @@ func Bai2(){
         var t:Int = Int(readLine()!) ?? 0
         arr.append(t)
     }
+    var even:Int?=nil,old :Int?=nil
     
-    var even:Int=0,old :Int=1
-    
-    for i in 0..<n
+    if(n==0)
     {
-        if(arr[i] % 2 != 0)
-        {
-            old=arr[i]
-            break;
-        }
-           
+        print("Đây là mảng rỗng")
     }
     
-    for i in 0..<n
+    else if(n==1)
     {
-        if(arr[i] % 2 == 0)
+        if(arr[0] % 2 == 0)
         {
-            even=arr[i]
+            print("Mảng có phần tử chẵn là : \(arr[0]) và mảng không có phần tử lẻ")
+        }
+        else
+        {
+            print("Mảng có phần tử lẻ là : \(arr[0]) và mảng không có phần tử chẵn")
         }
     }
     
-    print("Phần tử lẻ đầu tiên trong mảng là : \(old)")
-    print("Phần tử chẵn cuối cùng trong mảng là : \(even)")
+    else
+    {
+        for i in 0..<n
+        {
+            if(arr[i] % 2 != 0)
+            {
+                old=arr[i]
+                break;
+            }
+               
+        }
+        
+        for i in 0..<n
+        {
+            if(arr[i] % 2 == 0)
+            {
+                even=arr[i]
+            }
+        }
+        
+        print("Phần tử lẻ đầu tiên trong mảng là : \(old)")
+        print("Phần tử chẵn cuối cùng trong mảng là : \(even)")
+    }
+
 }
